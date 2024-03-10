@@ -5,7 +5,7 @@ Java Records are a concise way to create immutable data structures, automaticall
 The Builder Pattern comes to the rescue here. It allows step-by-step construction of complex objects and can be particularly useful when you have several optional parameters.
 Java record types being immutable, by default, the builder pattern is an excellent match for records.
 Below are three approaches to implementing the builder pattern with Java Records.
-1. Using Nested Static Class
+**1. Using Nested Static Class**
 Step 1: Define the Record
 We start by defining an Employee record with multiple fields.
 public record Employee(Long id, String name, String company, Integer salary) {}
@@ -61,7 +61,8 @@ public class Main {
 }
 Output:
 Employee[id=1, name=pravin, company=dummy, age=30]
-2. Using @Builder Lombok Annotation
+
+**2. Using @Builder Lombok Annotation**
 The Lombok is a pretty useful library when minimizing the boilerplate code for features such as implementing the builder pattern in a class or record. Start with including the latest version of Lombok in the project.
 Step 1: Add the Maven dependency
 <dependency>
@@ -91,7 +92,8 @@ public class Main {
 }
 Output:
 Employee[id=1, name=pravin, company=dummy, age=30]
-3. Using RecordBuilder Library
+
+**3. Using RecordBuilder Library**
 The RecordBuilder is an opensource library for adding new features to the record types, such as:
 a companion builder class for Java records
 an interface that adds "with" copy methods
